@@ -6,7 +6,7 @@
     list-style: none;
 }
 body{
-    background-color: black;
+    background-color: white;
 }
 a, li{
     font-family: 'Roboto', sans-serif;
@@ -41,4 +41,48 @@ header {
 .nav-menu li:last-child:hover{
     background: transparent;
     border: 2px solid #027ba3;
+}
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 2rem;
+    background: url('img/fondo.png') no-repeat center center/cover;
+    position: relative;
+}
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+.hero-content {
+    position: relative;
+    z-index: 2;
+    color: #fff;
+    max-width: 600px;
+}
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+.btn {
+    display: inline-block;
+    padding: 0.75rem 2rem;
+    background-color: #011c26;
+    color: #ffffff;
+    border-radius: 50px;
+    font-weight: 600;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #027ba3;
 }
